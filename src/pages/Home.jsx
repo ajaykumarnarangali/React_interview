@@ -9,7 +9,8 @@ function Home() {
     { name: "Pagination", path: "pagination" },
     { name: "Progressbar", path: "progress-bar" },
     { name: "Search", path: "search" },
-    { name: "Todo", path: "todo" }
+    { name: "Todo", path: "todo" },
+    {name:"TabForm", path:"tab-form"}
   ]
 
   return (

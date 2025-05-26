@@ -9,6 +9,7 @@ import Otp from './problems/Otp'
 import Accordion from './problems/Accordion'
 import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
+import Tabform from './problems/Tabform'
 
 function App() {
 
@@ -42,6 +43,7 @@ function App() {
       <Route path='/pagination' element={< Pagination/>}/>
       <Route path='/otp' element={<Otp/>}/>
       <Route path='/accordion' element={<Accordion items={items}/>}/>
+      <Route path='/tab-form' element={<Tabform/>}/>
      </Routes>
     </>
 

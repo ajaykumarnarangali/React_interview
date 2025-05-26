@@ -20,7 +20,6 @@ function Otp() {
             refArr.current[index + 1]?.focus();
         }
     }
-    console.log(inputArr);
 
     useEffect(() => {
         refArr.current[0]?.focus();
