@@ -10,7 +10,10 @@ import Accordion from './problems/Accordion'
 import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import Tabform from './problems/Tabform'
-
+import Folder from './problems/Folder'
+import Memo from './hooks/Memo'
+import Callback from './hooks/Callback'
+import Reducer from './hooks/reducer'
 function App() {
 
   const items = [
@@ -44,6 +47,10 @@ function App() {
       <Route path='/otp' element={<Otp/>}/>
       <Route path='/accordion' element={<Accordion items={items}/>}/>
       <Route path='/tab-form' element={<Tabform/>}/>
+      <Route path='/folder' element={<Folder/>}/>
+      <Route path='/use-memo' element={<Memo/>}/>
+      <Route path='/use-callback' element={<Callback/>}/>
+      <Route path='/use-reducer' element={<Reducer/>}/>
      </Routes>
     </>
 

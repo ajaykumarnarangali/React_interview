@@ -1,0 +1,97 @@
+<> map=>main
+    <div id="1">(public)
+        <span>{name of id 1}</span>
+        {have children recursion}
+        map=>public
+        <div id="2">(index.html)
+            <span>{name of id 2}</span>
+            {no children no recursion}
+        </div>
+    </div>
+    <div id="3">(src)
+        <span>{name of id 3}</span>
+        {have children recursion}
+        map=>src
+        <div id="4">(compontens)
+            <span>{name of id 4}</span>
+            {have children recursion}
+            map=>compontens
+            <div id="5">(file.js)
+                <span>{name of id 5}</span>
+                {no children no recursion}
+            </div>
+        </div>
+        <div id="6">(App.jsx)
+            <span>{name of id 6}</span>
+            {no children no recursion}
+        </div>
+        <div id="7">(style.css)
+            <span>{name of id 7}</span>
+            {no children no recursion}
+        </div>
+        <div id="8">(main.jsx)
+            <span>{name of id 8}</span>
+            {no children no recursion}
+        </div>
+    </div>
+    <div id="9">(package.json)
+        <span>{name of id 9}</span>
+        {no children no recursion}
+    </div>
+</>
+
+Exactly!
+
+Backtracking happens when:
+
+You finish iterating over all items in the current array (e.g., the children array of a folder),
+
+Or when you hit a leaf node (a file without children), so no further recursion occurs.
+
+At that point, the function returns from the current recursive call, going back ("backtracks") to the
+previous level where the rest of the sibling nodes (if any) are still to be processed.
+
+
+
+Step-by-step iteration & backtracking:
+Start at root array: [id 1, id 3, id 9]
+
+Process id 1 ("public")
+
+It has children, so recurse into children array [id 2].
+
+Process child id 2 ("index.html")
+
+No children → return from recursion back to processing siblings of id 1.
+
+Finished children of id 1 → return back to root array to process next sibling
+
+Process id 3 ("src")
+
+Has children, recurse into [id 4, id 6, id 7, id 8]
+
+Process child id 4 ("components")
+
+Has children, recurse into [id 5]
+
+Process child id 5 ("test.js")
+
+No children → return back to siblings of id 4
+
+Finished children of id 4 → back to children of id 3
+
+Process sibling id 6 ("App.jsx")
+
+No children → continue
+
+Process sibling id 7 ("index.css")
+
+No children → continue
+
+Process sibling id 8 ("main.jsx")
+
+No children → children array of id 3 done → return to root array
+
+Process id 9 ("package.json")
+
+No children → root array done

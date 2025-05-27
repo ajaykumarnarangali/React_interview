@@ -10,7 +10,11 @@ function Home() {
     { name: "Progressbar", path: "progress-bar" },
     { name: "Search", path: "search" },
     { name: "Todo", path: "todo" },
-    {name:"TabForm", path:"tab-form"}
+    { name: "TabForm", path: "tab-form" },
+    { name: "folder", path: "folder" },
+    { name: "useMemo", path: "use-memo" },
+    { name: "useCallback", path:"use-callback" },
+    { name: "useReducer", path:"use-Reducer" }
   ]
 
   return (
