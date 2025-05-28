@@ -14,6 +14,7 @@ import Folder from './problems/Folder'
 import Memo from './hooks/Memo'
 import Callback from './hooks/Callback'
 import Reducer from './hooks/reducer'
+import Query from './Query/Query'
 function App() {
 
   const items = [
@@ -51,6 +52,7 @@ function App() {
       <Route path='/use-memo' element={<Memo/>}/>
       <Route path='/use-callback' element={<Callback/>}/>
       <Route path='/use-reducer' element={<Reducer/>}/>
+      <Route path='/react-query' element={<Query/>}/>
      </Routes>
     </>
 

@@ -13,8 +13,9 @@ function Home() {
     { name: "TabForm", path: "tab-form" },
     { name: "folder", path: "folder" },
     { name: "useMemo", path: "use-memo" },
-    { name: "useCallback", path:"use-callback" },
-    { name: "useReducer", path:"use-Reducer" }
+    { name: "useCallback", path: "use-callback" },
+    { name: "useReducer", path: "use-Reducer" },
+    { name: "ReactQuery", path: "react-query" }
   ]
 
   return (
