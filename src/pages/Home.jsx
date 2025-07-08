@@ -16,7 +16,8 @@ function Home() {
     { name: "useMemo", path: "use-memo" },
     { name: "useCallback", path: "use-callback" },
     { name: "useReducer", path: "use-Reducer" },
-    { name: "ReactQuery", path: "react-query" }
+    { name: "ReactQuery", path: "react-query" },
+    { name: 'Data table', path: 'data-table' }
   ]
 
   return (

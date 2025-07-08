@@ -16,6 +16,7 @@ import Callback from './hooks/Callback'
 import Reducer from './hooks/reducer'
 import Query from './Query/Query'
 import TodoRating from './problems/TodoRating'
+import DataTable from './problems/DataTable'
 
 function App() {
 
@@ -40,23 +41,24 @@ function App() {
 
   return (
     <>
-     <Routes>
-      <Route path='/' element={<Home/>}/>
-      <Route path='/search' element={<Search/>}/>
-      <Route path='/todo' element={<Todo/>}/>
-      <Route path='/chips' element={<Chips/>}/>
-      <Route path='/progress-bar' element={<Progressbar progress={33}/>}/>
-      <Route path='/pagination' element={< Pagination/>}/>
-      <Route path='/otp' element={<Otp/>}/>
-      <Route path='/accordion' element={<Accordion items={items}/>}/>
-      <Route path='/tab-form' element={<Tabform/>}/>
-      <Route path='/folder' element={<Folder/>}/>
-      <Route path='/use-memo' element={<Memo/>}/>
-      <Route path='/use-callback' element={<Callback/>}/>
-      <Route path='/use-reducer' element={<Reducer/>}/>
-      <Route path='/react-query' element={<Query/>}/>
-      <Route path='/rating-todo' element={<TodoRating/>}/>
-     </Routes>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/search' element={<Search />} />
+        <Route path='/todo' element={<Todo />} />
+        <Route path='/chips' element={<Chips />} />
+        <Route path='/progress-bar' element={<Progressbar progress={33} />} />
+        <Route path='/pagination' element={< Pagination />} />
+        <Route path='/otp' element={<Otp />} />
+        <Route path='/accordion' element={<Accordion items={items} />} />
+        <Route path='/tab-form' element={<Tabform />} />
+        <Route path='/folder' element={<Folder />} />
+        <Route path='/use-memo' element={<Memo />} />
+        <Route path='/use-callback' element={<Callback />} />
+        <Route path='/use-reducer' element={<Reducer />} />
+        <Route path='/react-query' element={<Query />} />
+        <Route path='/rating-todo' element={<TodoRating />} />
+        <Route path='/data-table' element={<DataTable />} />
+      </Routes>
     </>
 
   )
