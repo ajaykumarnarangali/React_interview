@@ -15,6 +15,8 @@ import Memo from './hooks/Memo'
 import Callback from './hooks/Callback'
 import Reducer from './hooks/reducer'
 import Query from './Query/Query'
+import TodoRating from './problems/TodoRating'
+
 function App() {
 
   const items = [
@@ -53,6 +55,7 @@ function App() {
       <Route path='/use-callback' element={<Callback/>}/>
       <Route path='/use-reducer' element={<Reducer/>}/>
       <Route path='/react-query' element={<Query/>}/>
+      <Route path='/rating-todo' element={<TodoRating/>}/>
      </Routes>
     </>
 

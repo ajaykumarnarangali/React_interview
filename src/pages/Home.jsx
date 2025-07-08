@@ -11,6 +11,7 @@ function Home() {
     { name: "Search", path: "search" },
     { name: "Todo", path: "todo" },
     { name: "TabForm", path: "tab-form" },
+    { name: 'Rating & todo with timer', path: 'rating-todo' },
     { name: "folder", path: "folder" },
     { name: "useMemo", path: "use-memo" },
     { name: "useCallback", path: "use-callback" },
