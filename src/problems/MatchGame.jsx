@@ -7,7 +7,7 @@ function MatchGame() {
     const [firstCard, setFirstCard] = useState(null);
     const [secondCard, setSecondCard] = useState(null);
     const [moves, setMoves] = useState(0);
-    const [won, setWon] = useState(false);
+    const [matches, setMatches] = useState(0);
     const [isDisable, setIsDisable] = useState(false);
 
 
@@ -27,15 +27,63 @@ function MatchGame() {
         setCards(() => {
             return card;
         })
+        setMatches(0);
+    }
+
+    function resetSelectedCards() {
+        setFirstCard(null);
+        setSecondCard(null);
+        setIsDisable(false);
+    }
+
+    function handleMatch() {
+        setIsDisable(true);
+        setMoves(prev => prev + 1);
+        if (firstCard.value == secondCard.value) {
+            setCards((prev) => {
+                return prev.map((each) => {
+                    return (each.id == firstCard.id || each.id == secondCard.id) ? { ...each, matched: true } : each
+                })
+            });
+            setMatches(prev => prev + 1);
+            resetSelectedCards();
+        } else {
+            setTimeout(() => {
+                setCards((prev) => {
+                    return prev.map((each) => {
+                        return (each.id == firstCard.id || each.id == secondCard.id) ? { ...each, revealed: false } : each
+                    })
+                })
+                resetSelectedCards();
+            }, 1000);
+        }
     }
 
     useEffect(() => {
         initCards();
     }, []);
 
-  
-    const handleMatch = (card) => {
-      
+    useEffect(() => {
+        if (!firstCard || !secondCard) {
+            return;
+        }
+        handleMatch();
+    }, [secondCard]);
+
+    const selectCard = (card) => {
+        if (isDisable) {
+            return;
+        }
+        setCards((prev) => {
+            return prev.map((each) => {
+                return each.id == card.id ? { ...each, revealed: true } : each
+            })
+        })
+        if (!firstCard) {
+            setFirstCard(card)
+        } else if (firstCard.id != card.id) {
+            setSecondCard(card)
+        }
     }
 
     return (
@@ -47,7 +95,7 @@ function MatchGame() {
                         cards.map((card, i) => (
                             <div className={` ${(card.revealed || card.matched) ? 'bg-white' : 'bg-slate-400'}
                              rounded-md cursor-pointer flex items-center justify-center`} key={i}
-                                onClick={() => { handleMatch(card) }}
+                                onClick={() => { selectCard(card) }}
                                 aria-disabled={isDisable}
                             >
                                 {(card.revealed || card.matched) && card.value}
@@ -58,6 +106,7 @@ function MatchGame() {
                 <div className='flex flex-col gap-1'>
                     <span>Moves: {moves}</span>
                     <button className='p-1 bg-slate-300' onClick={initCards}>Reset</button>
+                    <span className="text-green-700">{matches == 8 && 'You won'}</span>
                 </div>
             </div>
         </div>
