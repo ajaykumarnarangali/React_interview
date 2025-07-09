@@ -17,6 +17,7 @@ import Reducer from './hooks/reducer'
 import Query from './Query/Query'
 import TodoRating from './problems/TodoRating'
 import DataTable from './problems/DataTable'
+import MatchGame from './problems/MatchGame'
 
 function App() {
 
@@ -58,6 +59,7 @@ function App() {
         <Route path='/react-query' element={<Query />} />
         <Route path='/rating-todo' element={<TodoRating />} />
         <Route path='/data-table' element={<DataTable />} />
+        <Route path='/match-game' element={<MatchGame />} />
       </Routes>
     </>
 

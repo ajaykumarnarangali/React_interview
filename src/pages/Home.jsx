@@ -17,7 +17,8 @@ function Home() {
     { name: "useCallback", path: "use-callback" },
     { name: "useReducer", path: "use-Reducer" },
     { name: "ReactQuery", path: "react-query" },
-    { name: 'Data table', path: 'data-table' }
+    { name: 'Data table', path: 'data-table' },
+    { name: 'Match game', path: 'match-game' }
   ]
 
   return (
