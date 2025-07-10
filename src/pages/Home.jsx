@@ -18,7 +18,8 @@ function Home() {
     { name: "useReducer", path: "use-Reducer" },
     { name: "ReactQuery", path: "react-query" },
     { name: 'Data table', path: 'data-table' },
-    { name: 'Match game', path: 'match-game' }
+    { name: 'Match game', path: 'match-game' },
+    { name: 'Image carousel', path: 'image-carousel' }
   ]
 
   return (
