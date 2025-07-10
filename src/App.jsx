@@ -19,6 +19,7 @@ import TodoRating from './problems/TodoRating'
 import DataTable from './problems/DataTable'
 import MatchGame from './problems/MatchGame'
 import ImageCarousel from './problems/ImageCarousel'
+import TransferList from './problems/TransferList'
 
 function App() {
 
@@ -62,6 +63,7 @@ function App() {
         <Route path='/data-table' element={<DataTable />} />
         <Route path='/match-game' element={<MatchGame />} />
         <Route path='/image-carousel' element={<ImageCarousel />} />
+        <Route path='/transfer-list' element={<TransferList />} />
       </Routes>
     </>
 
